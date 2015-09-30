@@ -16,8 +16,8 @@ class Sweetercolor: NSObject {
     /**
         Create a Sweetercolor with a hex value.
         
-        :param: hex     The hex color, i.e. 0xFF0072.
-        :param: alpha   The opacity of the color, value between [0,1]. Optional. Default: 1
+        - parameter hex:     The hex color, i.e. 0xFF0072.
+        - parameter alpha:   The opacity of the color, value between [0,1]. Optional. Default: 1
     */
     init(hex: Int, alpha: CGFloat = 1) {
         let R = CGFloat((hex >> 16) & 0xFF)/255
@@ -29,7 +29,7 @@ class Sweetercolor: NSObject {
     /**
         Create a Sweetercolor with an UIColor object.
     
-        :param: color   Color the color to be made.
+        - parameter color:   Color the color to be made.
     */
     init(color: UIColor) {
         self.color = color
@@ -39,10 +39,10 @@ class Sweetercolor: NSObject {
         Create a Sweetercolor with a RGB(A) values. The RGB values must *ALL*
         either be between [0, 1] OR [0, 255], do not interchange between either one.
     
-        :param: red     Red value between [0, 1] OR [0, 255].
-        :param: green   Green value between [0, 1] OR [0, 255].
-        :param: blue    Blue value between [0, 1] OR [0, 255].
-        :param: alpha   The opacity of the color, value between [0, 1]. Optional. Default: 1
+        - parameter red:     Red value between [0, 1] OR [0, 255].
+        - parameter green:   Green value between [0, 1] OR [0, 255].
+        - parameter blue:    Blue value between [0, 1] OR [0, 255].
+        - parameter alpha:   The opacity of the color, value between [0, 1]. Optional. Default: 1
     */
     init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1) {
         if (1 < red) || (1 < green) || (1 < blue) {
@@ -55,10 +55,10 @@ class Sweetercolor: NSObject {
     /**
         Create a Sweetercolor with a HSB(A) values.
         
-        :param: hue         Hue value between [0, 1] OR [0, 360].
-        :param: saturation  Saturation value between [0, 1] OR [0, 100].
-        :param: brightness  Brightness value between [0, 1] OR [0, 100].
-        :param: alpha       The opacity of the color, value between [0,1]. Optional. Default: 1
+        - parameter hue:         Hue value between [0, 1] OR [0, 360].
+        - parameter saturation:  Saturation value between [0, 1] OR [0, 100].
+        - parameter brightness:  Brightness value between [0, 1] OR [0, 100].
+        - parameter alpha:       The opacity of the color, value between [0,1]. Optional. Default: 1
     */
     init(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat = 1) {
         if (1 < hue) || (1 < saturation) || (1 < brightness) {
@@ -217,7 +217,7 @@ class Sweetercolor: NSObject {
     /**
         Get the red, green, blue and alpha values.
     
-        :returns: An array of four CGFloat numbers from [0, 1] representing RGBA respectively.
+        - returns: An array of four CGFloat numbers from [0, 1] representing RGBA respectively.
     */
     var RGBA: [CGFloat] {
         var RGBA: [CGFloat] = [0,0,0,0]
@@ -228,7 +228,7 @@ class Sweetercolor: NSObject {
     /**
         Get the human readable red, green, blue and alpha values.
     
-        :returns: An array of four CGFloat numbers from [0, 255] representing RGBA respectively.
+        - returns: An array of four CGFloat numbers from [0, 255] representing RGBA respectively.
     */
     var humanRGBA: [CGFloat] {
         let RGBA = self.RGBA
@@ -238,7 +238,7 @@ class Sweetercolor: NSObject {
     /**
         Get the hue, saturation, brightness and alpha values.
     
-        :returns: An array of four CGFloat numbers from [0, 255] representing HSBA respectively.
+        - returns: An array of four CGFloat numbers from [0, 255] representing HSBA respectively.
     */
     var HSBA: [CGFloat] {
         var HSBA: [CGFloat] = [0,0,0,0]
@@ -249,7 +249,7 @@ class Sweetercolor: NSObject {
     /**
         Get the human readable hue, saturation, brightness and alpha values.
     
-        :returns: An array of four CGFloat numbers representing HSBA respectively. Ranges: H[0,360], S[0,100], B[0,100], A[0,1]
+        - returns: An array of four CGFloat numbers representing HSBA respectively. Ranges: H[0,360], S[0,100], B[0,100], A[0,1]
     */
     var humanHSBA: [CGFloat] {
         let HSBA = self.HSBA
@@ -259,7 +259,7 @@ class Sweetercolor: NSObject {
     /**
         Get the CIE XYZ values.
     
-        :returns: An array of three CGFloat numbers representing XYZ respectively.
+        - returns: An array of three CGFloat numbers representing XYZ respectively.
     */
     var XYZ: [CGFloat] {
         // http://www.easyrgb.com/index.php?X=MATH&H=02#text2
@@ -285,7 +285,7 @@ class Sweetercolor: NSObject {
     /**
         Get the CIE L*ab values.
     
-        :returns: An array of three CGFloat numbers representing LAB respectively.
+        - returns: An array of three CGFloat numbers representing LAB respectively.
     */
     var LAB: [CGFloat] {
         // http://www.easyrgb.com/index.php?X=MATH&H=07#text7
@@ -311,7 +311,7 @@ class Sweetercolor: NSObject {
         Get the relative luminosity value of the color. This follows the W3 specs of luminosity
         to give weight to colors which humans perceive more of.
     
-        :returns: A CGFloat representing the relative luminosity.
+        - returns: A CGFloat representing the relative luminosity.
     */
     var luminance: CGFloat {
         // http://www.w3.org/WAI/GL/WCAG20-TECHS/G18.html
@@ -328,7 +328,7 @@ class Sweetercolor: NSObject {
     /**
         Determine if the color is dark based on the relative luminosity of the color.
     
-        :returns: A boolean: true if it is dark and false if it is not dark.
+        - returns: A boolean: true if it is dark and false if it is not dark.
     */
     var isDarkColor: Bool {
         return self.luminance < 0.5
@@ -337,7 +337,7 @@ class Sweetercolor: NSObject {
     /**
         Determine if the color is light based on the relative luminosity of the color.
     
-        :returns: A boolean: true if it is light and false if it is not light.
+        - returns: A boolean: true if it is light and false if it is not light.
     */
     var isLightColor: Bool {
         return !self.isDarkColor
@@ -346,9 +346,9 @@ class Sweetercolor: NSObject {
     /**
         Determine if this colors is darker than the compared color based on the relative luminosity of both colors.
     
-        :param: compareColor A Sweetercolor to compare.
+        - parameter compareColor: A Sweetercolor to compare.
         
-        :returns: A boolean: true if this colors is darker than the compared color and false if otherwise.
+        - returns: A boolean: true if this colors is darker than the compared color and false if otherwise.
     */
     func isDarkerThan(compareColor: Sweetercolor) -> Bool {
         return self.luminance < compareColor.luminance
@@ -357,9 +357,9 @@ class Sweetercolor: NSObject {
     /**
         Determine if this colors is lighter than the compared color based on the relative luminosity of both colors.
     
-        :param: compareColor A Sweetercolor to compare.
+        - parameter compareColor: A Sweetercolor to compare.
     
-        :returns: A boolean: true if this colors is lighter than the compared color and false if otherwise.
+        - returns: A boolean: true if this colors is lighter than the compared color and false if otherwise.
     */
     func isLighterThan(compareColor: Sweetercolor) -> Bool {
         return !self.isDarkerThan(compareColor)
@@ -368,7 +368,7 @@ class Sweetercolor: NSObject {
     /**
         Determine if this color is either black or white.
         
-        :returns: A boolean: true if this color is black or white and false otherwise.
+        - returns: A boolean: true if this color is black or white and false otherwise.
     */
     var isBlackOrWhite: Bool {
         let RGBA = self.RGBA
@@ -382,9 +382,9 @@ class Sweetercolor: NSObject {
         Detemine the distance between two colors based on the way humans perceive them.
         Uses the Sharma 2004 alteration of the CIEDE2000 algorithm.
     
-        :param: compareColor A Sweetercolor to compare.
+        - parameter compareColor: A Sweetercolor to compare.
     
-        :returns: A CGFloat representing the deltaE
+        - returns: A CGFloat representing the deltaE
     */
     func CIEDE2000(compareColor: Sweetercolor) -> CGFloat {
         // CIEDE2000, Sharma 2004 -> http://www.ece.rochester.edu/~gsharma/ciede2000/ciede2000noteCRNA.pdf
@@ -477,9 +477,9 @@ class Sweetercolor: NSObject {
         Detemine the distance between two colors based on the way humans perceive them.
         Uses the CIE94 algorithm.
     
-        :param: compareColor A Sweetercolor to compare.
+        - parameter compareColor: A Sweetercolor to compare.
     
-        :returns: A CGFloat representing the deltaE
+        - returns: A CGFloat representing the deltaE
     */
     func CIE94(compareColor: Sweetercolor) -> CGFloat {
         // https://en.wikipedia.org/wiki/Color_difference#CIE94
@@ -524,9 +524,9 @@ class Sweetercolor: NSObject {
         A low ratio implies there is a smaller contrast between the two colors.
         A higher ratio implies there is a larger contrast between the two colors.
     
-        :param: compareColor A Sweetercolor to compare.
+        - parameter compareColor: A Sweetercolor to compare.
     
-        :returns: A CGFloat representing the contrast ratio of the two colors.
+        - returns: A CGFloat representing the contrast ratio of the two colors.
     */
     func contrastRatio(compareColor: Sweetercolor) -> CGFloat {
         // http://www.w3.org/WAI/GL/WCAG20-TECHS/G18.html
@@ -544,10 +544,10 @@ class Sweetercolor: NSObject {
     /**
         Determine if two colors are contrasting or not based on the W3 standard.
     
-        :param: compareColor    A Sweetercolor to compare.
-        :param: strict          A boolean, if true a stricter judgment of contrast ration will be used. Optional. Default: false
+        - parameter compareColor:    A Sweetercolor to compare.
+        - parameter strict:          A boolean, if true a stricter judgment of contrast ration will be used. Optional. Default: false
         
-        :returns: a boolean, true of the two colors are contrasting, false otherwise.
+        - returns: a boolean, true of the two colors are contrasting, false otherwise.
     */
     func isContrastingColor(compareColor: Sweetercolor, strict: Bool = false) -> Bool {
         // http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast
@@ -559,7 +559,7 @@ class Sweetercolor: NSObject {
     /**
         Get either black or white to contrast against a color.
         
-        :returns: A Sweetercolor, either black or white to contrast against this color.
+        - returns: A Sweetercolor, either black or white to contrast against this color.
     */
     var fullContrastColor: Sweetercolor {
         let RGBA = self.RGBA
@@ -571,9 +571,9 @@ class Sweetercolor: NSObject {
     /**
         Get a clone of this color with a different alpha value.
     
-        :param: newAlpha The opacity of the new color, value from [0, 1]
+        - parameter newAlpha: The opacity of the new color, value from [0, 1]
     
-        :returns: A Sweetercolor clone with the new alpha.
+        - returns: A Sweetercolor clone with the new alpha.
     */
     func setAlpha(newAlpha: CGFloat) -> Sweetercolor {
         let RGB = self.RGBA
@@ -583,7 +583,7 @@ class Sweetercolor: NSObject {
     /**
         Get a new color if a black overlay was applied.
         
-        :returns: A Sweetercolor with a black overlay.
+        - returns: A Sweetercolor with a black overlay.
     */
     var overlayBlack: Sweetercolor {
         return self.overlay(Sweetercolor.black())
@@ -592,7 +592,7 @@ class Sweetercolor: NSObject {
     /**
         Get a new color if a white overlay was applied.
     
-        :returns: A Sweetercolor with a white overlay.
+        - returns: A Sweetercolor with a white overlay.
     */
     var overlayWhite: Sweetercolor {
         return self.overlay(Sweetercolor.white())
@@ -602,9 +602,9 @@ class Sweetercolor: NSObject {
         Get a new color with a mask overlay blend mode on top of this color.
         This is similar to Photoshop's overlay blend mode.
     
-        :param: mask A Sweetercolor to apply as an overlay mask on top.
+        - parameter mask: A Sweetercolor to apply as an overlay mask on top.
     
-        :returns: A Sweetercolor with the applied overlay.
+        - returns: A Sweetercolor with the applied overlay.
     */
     func overlay(mask: Sweetercolor) -> Sweetercolor {
         let mainRGBA = self.RGBA
@@ -619,10 +619,10 @@ class Sweetercolor: NSObject {
         }
         
         return Sweetercolor(
-            red: masker(mainRGBA[0], maskRGBA[0]),
-            green: masker(mainRGBA[1], maskRGBA[1]),
-            blue: masker(mainRGBA[2], maskRGBA[2]),
-            alpha: masker(mainRGBA[3], maskRGBA[3])
+            red: masker(mainRGBA[0], b: maskRGBA[0]),
+            green: masker(mainRGBA[1], b: maskRGBA[1]),
+            blue: masker(mainRGBA[2], b: maskRGBA[2]),
+            alpha: masker(mainRGBA[3], b: maskRGBA[3])
         )
     }
     
@@ -630,9 +630,9 @@ class Sweetercolor: NSObject {
         Get a new color with a mask multiply blend mode on top of this color.
         This is similar to Photoshop's multiply blend mode.
     
-        :param: mask A Sweetercolor to apply as a multiply mask on top.
+        - parameter mask: A Sweetercolor to apply as a multiply mask on top.
     
-        :returns: A Sweetercolor with the applied multiply blend mode.
+        - returns: A Sweetercolor with the applied multiply blend mode.
     */
     func multiply(mask: Sweetercolor) -> Sweetercolor {
         let mainRGBA = self.RGBA
@@ -650,9 +650,9 @@ class Sweetercolor: NSObject {
         Get a new color with a mask screen blend mode on top of this color.
         This is similar to Photoshop's screen blend mode.
     
-        :param: mask A Sweetercolor to apply as a screen mask on top.
+        - parameter mask: A Sweetercolor to apply as a screen mask on top.
     
-        :returns: A Sweetercolor with the applied screen blend mode.
+        - returns: A Sweetercolor with the applied screen blend mode.
     */
     func screen(mask: Sweetercolor) -> Sweetercolor {
         let mainRGBA = self.RGBA
@@ -663,10 +663,10 @@ class Sweetercolor: NSObject {
         }
         
         return Sweetercolor(
-            red: masker(mainRGBA[0], maskRGBA[0]),
-            green: masker(mainRGBA[1], maskRGBA[1]),
-            blue: masker(mainRGBA[2], maskRGBA[2]),
-            alpha: masker(mainRGBA[3], maskRGBA[3])
+            red: masker(mainRGBA[0], b: maskRGBA[0]),
+            green: masker(mainRGBA[1], b: maskRGBA[1]),
+            blue: masker(mainRGBA[2], b: maskRGBA[2]),
+            alpha: masker(mainRGBA[3], b: maskRGBA[3])
         )
     }
     
@@ -682,7 +682,7 @@ class Sweetercolor: NSObject {
     /**
         Get the compliment of this color on the hue wheel.
     
-        :returns: A compliment Sweetercolor.
+        - returns: A compliment Sweetercolor.
     */
     var compliment: Sweetercolor {
         return self.harmony(180)
@@ -691,7 +691,7 @@ class Sweetercolor: NSObject {
     /**
         Get the split compliments of this color on the hue wheel.
     
-        :returns: An array of two compliment Sweetercolors.
+        - returns: An array of two compliment Sweetercolors.
     */
     var splitCompliment: [Sweetercolor] {
         return [self.harmony(150), self.harmony(-150)]
@@ -700,7 +700,7 @@ class Sweetercolor: NSObject {
     /**
         Get the analogous colors of this color on the hue wheel.
     
-        :returns: An array of two analogous Sweetercolors.
+        - returns: An array of two analogous Sweetercolors.
     */
     var analogous: [Sweetercolor] {
         return [self.harmony(30), self.harmony(-30)]
@@ -709,7 +709,7 @@ class Sweetercolor: NSObject {
     /**
         Get the triad colors of this color on the hue wheel.
     
-        :returns: An array of two triad Sweetercolors.
+        - returns: An array of two triad Sweetercolors.
     */
     var triad: [Sweetercolor] {
         return [self.harmony(120), self.harmony(-120)]

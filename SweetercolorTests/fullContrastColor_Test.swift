@@ -12,14 +12,14 @@ import XCTest
 class fullContrastColor_Test: XCTestCase {
     
     func testBlack() {
-        var color = Sweetercolor.black()
-        var white = Sweetercolor.white()
+        let color = Sweetercolor.black()
+        let white = Sweetercolor.white()
         XCTAssertEqual(color.fullContrastColor, white, "The full contrast color for black should be white.")
     }
     
     func testWhite() {
-        var color = Sweetercolor.white()
-        var black = Sweetercolor.black()
+        let color = Sweetercolor.white()
+        let black = Sweetercolor.black()
         XCTAssertEqual(color.fullContrastColor, black, "The full contrast color for white should be black.")
     }
 
