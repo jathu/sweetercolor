@@ -67,8 +67,8 @@ Initialized similar to UIColor: Sweetercolor.colorName()
 | **overlayWhite** | Get a new color if a white overlay was applied. | Sweetercolor |
 | **multiply(mask: Sweetercolor)** | Get a new color with a mask multiply blend mode on top of this color. This is similar to Photoshop's multiply blend mode. | Sweetercolor |
 | **screen(mask: Sweetercolor)** | Get a new color with a mask screen blend mode on top of this color. This is similar to Photoshop's screen blend mode. | Sweetercolor |
-| **compliment** | Get the compliment of this color on the hue wheel. | Sweetercolor |
-| **splitCompliment** | Get the split compliments of this color on the hue wheel. | [Sweetercolor] |
+| **complement** | Get the complement of this color on the hue wheel. | Sweetercolor |
+| **splitComplement** | Get the split complements of this color on the hue wheel. | [Sweetercolor] |
 | **analogous** | Get the analogous colors of this color on the hue wheel. | [Sweetercolor] |
 | **triad** | Get the triad colors of this color on the hue wheel. | [Sweetercolor] |
 

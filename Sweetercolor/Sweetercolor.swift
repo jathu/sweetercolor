@@ -680,20 +680,20 @@ class Sweetercolor: NSObject {
     }
     
     /**
-        Get the compliment of this color on the hue wheel.
+        Get the complement of this color on the hue wheel.
     
-        - returns: A compliment Sweetercolor.
+        - returns: A complement Sweetercolor.
     */
-    var compliment: Sweetercolor {
+    var complement: Sweetercolor {
         return self.harmony(180)
     }
     
     /**
-        Get the split compliments of this color on the hue wheel.
+        Get the split complements of this color on the hue wheel.
     
-        - returns: An array of two compliment Sweetercolors.
+        - returns: An array of two complement Sweetercolors.
     */
-    var splitCompliment: [Sweetercolor] {
+    var splitcomplement: [Sweetercolor] {
         return [self.harmony(150), self.harmony(-150)]
     }
     
