@@ -7,18 +7,17 @@ A color extension library for Swift.
 ## Example
 
 ``` Swift
-let pink = Sweetercolor(hex: 0xC60A3C)
+let sun = Sweetercolor(hex: 0xFBF002)
+let pink = Sweetercolor(hex: 0xF389B9)
 
-let view = UIView(frame: CGRectMake(0, 0, 300, 300))
-view.backgroundColor = pink.color
+let container = UIView(frame: CGRectMake(0, 0, 888, 250))
+container.backgroundColor = pink.color
 
-let logo = UIImageView(frame: CGRectMake(75, 57, 150, 185))
-logo.image = UIImage(named: "logo.png")
-logo.layer.shadowColor =  pink.overlayBlack.color.CGColor
-logo.layer.shadowOffset = CGSizeMake(0, 10)
-logo.layer.shadowOpacity = 1
-logo.layer.shadowRadius = logo.layer.shadowOffset.height/2
-view.addSubview(logo)
+let label = UILabel(frame: container.frame)
+label.text = "Sweet"
+label.textColor = sun.color
+label.layer.shadowColor = pink.overlayBlack.color.CGColor
+container.addSubview(label)
 ```
 ![Example Preview](Images/preview.png)
 
