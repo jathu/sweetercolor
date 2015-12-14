@@ -7,6 +7,7 @@ A color extension library for Swift.
 ## Example
 
 ``` Swift
+// Example of hex initializer
 let sun = Sweetercolor(hex: 0xFBF002)
 let pink = Sweetercolor(hex: 0xF389B9)
 
@@ -16,8 +17,9 @@ container.backgroundColor = pink.color
 let label = UILabel(frame: container.frame)
 label.text = "Sweet"
 label.textColor = sun.color
+
+// Example of overlay similar to Photoshop
 label.layer.shadowColor = pink.overlayBlack.color.CGColor
-container.addSubview(label)
 ```
 ![Example Preview](Images/preview.png)
 
