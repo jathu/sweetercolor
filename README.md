@@ -9,7 +9,8 @@ A color extension library for Swift.
 ``` Swift
 // Example of hex initializer
 let sun = Sweetercolor(hex: 0xFBF002)
-let pink = Sweetercolor(hex: 0xF389B9)
+// Example of RGB 0-255 initializer
+let pink = Sweetercolor(red: 243, green: 137, blue: 185)
 
 let container = UIView(frame: CGRectMake(0, 0, 888, 250))
 container.backgroundColor = pink.color
