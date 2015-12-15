@@ -19,8 +19,8 @@ let label = UILabel(frame: container.frame)
 label.text = "Sweet"
 label.textColor = sun.color
 
-// Example of overlay similar to Photoshop
-label.layer.shadowColor = pink.overlayBlack.color.CGColor
+// Example of overlay similar to Photoshop with reduced alpha
+label.layer.shadowColor = pink.overlayBlack.withAlpha(0.6).color.CGColor
 ```
 ![Example Preview](Images/preview.png)
 
