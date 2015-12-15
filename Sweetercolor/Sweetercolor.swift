@@ -575,7 +575,7 @@ class Sweetercolor: NSObject {
     
         - returns: A Sweetercolor clone with the new alpha.
     */
-    func setAlpha(newAlpha: CGFloat) -> Sweetercolor {
+    func withAlpha(newAlpha: CGFloat) -> Sweetercolor {
         let RGB = self.RGBA
         return Sweetercolor(red: RGB[0], green: RGB[1], blue: RGB[2], alpha: newAlpha)
     }

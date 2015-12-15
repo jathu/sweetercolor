@@ -63,7 +63,7 @@ Initialized similar to UIColor: Sweetercolor.colorName()
 | **contrastRatio(compareColor: Sweetercolor)** | Determine the contrast ratio between two colors. A low ratio implies there is a smaller contrast between the two colors. A higher ratio implies there is a larger contrast between the two colors. |  CGFloat |
 | **isContrastingColor(compareColor: Sweetercolor, strict: Bool = false)** | Determine if two colors are contrasting or not based on the W3 standard. | Bool |
 | **fullContrastColor** | Get either black or white to contrast against a color. | Sweetercolor |
-| **setAlpha(newAlpha: CGFloat)** | Get a clone of this color with a different alpha value. | Sweetercolor |
+| **withAlpha(newAlpha: CGFloat)** | Get a clone of this color with a different alpha value. | Sweetercolor |
 | **overlay(mask: Sweetercolor)** | Get a new color with a mask overlay blend mode on top of this color. This is similar to Photoshop's overlay blend mode. | Sweetercolor |
 | **overlayBlack** | Get a new color if a black overlay was applied. | Sweetercolor |
 | **overlayWhite** | Get a new color if a white overlay was applied. | Sweetercolor |
