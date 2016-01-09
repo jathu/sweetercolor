@@ -1,0 +1,70 @@
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #FFF;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+#container {
+  position: relative;
+  width: 1000px;
+  padding: 0px calc(50% - 500px);
+  height: 100vh;
+  overflow: hidden;
+  text-align: left;
+
+  background-color: #FFE01B;
+  background-image: url(images/banana.png);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 500px - 175px) calc(100% - 50px);
+  background-size: 350px auto;
+}
+
+#container #container-title {
+  color: #0079C1;
+  margin: 100px 0px 0px 0px;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+#container #container-title p {
+  margin: 0px;
+  padding: 0;
+}
+
+#container button {
+  margin: 50px 0px;
+  background: none;
+  border: 2px solid #0079C1;
+  color: #0079C1;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+
+  opacity: 0.6;
+  -webkit-transition: opacity 100ms;
+	-moz-transition:  opacity 100ms;
+	-ms-transition:  opacity 100ms;
+	-o-transition:  opacity 100ms;
+	transition:  opacity 100ms;
+}
+
+#container button:hover {
+  opacity: 1;
+}
+
+#container button:active {
+  margin: 51px 0px;
+}
