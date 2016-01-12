@@ -2,7 +2,9 @@
 
 # Sweetercolor
 
-A color extension library for Swift.
+A color extension library for Swift.*
+
+*It has Photoshop style color blending!
 
 ## Example
 
