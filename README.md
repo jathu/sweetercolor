@@ -40,10 +40,10 @@ Each method is documented using headerdocs. This is just an overview.
 
 | Variable/Method | Description | Return Type |
 |--------|-------------| -------|
-| **RGBA** | Get the red, green, blue and alpha values. | [CGFloat] |
-| **RGBA_8Bit** | Get the 8 bit red, green, blue and alpha values. | [CGFloat] |
-| **HSBA** | Get the hue, saturation, brightness and alpha values. | [CGFloat] |
-| **HSBA_8Bit** | Get the 8 bit hue, saturation, brightness and alpha values. | [CGFloat] |
+| **RGBA** | Get the red, green, blue and alpha values. (0-1) | [CGFloat] |
+| **RGBA_8Bit** | Get the 8 bit red, green, blue and alpha values. (0-255) | [CGFloat] |
+| **HSBA** | Get the hue, saturation, brightness and alpha values. (0-1) | [CGFloat] |
+| **HSBA_8Bit** | Get the 8 bit hue, saturation, brightness and alpha values. (0-255) | [CGFloat] |
 | **XYZ** | Get the CIE XYZ values. | [CGFloat] |
 | **LAB** | Get the CIE L*ab values. | [CGFloat] |
 | **luminance** | Get the relative luminosity value of the color. This follows the W3 specs of luminosity to give weight to colors which humans perceive more of. | CGFloat |
