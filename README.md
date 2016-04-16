@@ -70,7 +70,9 @@ Each method is documented using headerdocs. This is just an overview.
 
 ## License
 
-Feel free to do whatever you want. Please include the original header in any modifications or redistributions.
+MIT License - Included in project
+
+Copyright (c) 2015 Jathu Satkunarajah
 
 ## Logo
 
