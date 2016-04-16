@@ -12,33 +12,33 @@ import XCTest
 class isDarkColor_Test: XCTestCase {
     
     func testIsBlackDark() {
-        XCTAssertTrue(Sweetercolor.black().isDarkColor, "Black is a dark color.")
+        XCTAssertTrue(UIColor.black().isDarkColor, "Black is a dark color.")
     }
     
     func testIsWhiteDark() {
-        XCTAssertFalse(Sweetercolor.white().isDarkColor, "White is not a dark color.")
+        XCTAssertFalse(UIColor.white().isDarkColor, "White is not a dark color.")
     }
     
     func testIsRedDark() {
-        XCTAssertTrue(Sweetercolor.red().isDarkColor, "Red is a dark color.")
+        XCTAssertTrue(UIColor.redColor().isDarkColor, "Red is a dark color.")
     }
     
     func testIsYellowDark() {
-        XCTAssertFalse(Sweetercolor.yellow().isDarkColor, "Yellow is not a dark color.")
+        XCTAssertFalse(UIColor.yellowColor().isDarkColor, "Yellow is not a dark color.")
     }
     
     func testIsDarkGrayDark() {
-        let darkGray = Sweetercolor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1)
+        let darkGray = UIColor(r: 0.25, g: 0.25, b: 0.25, a: 1)
         XCTAssertTrue(darkGray.isDarkColor, "Dark gray is a dark color.")
     }
     
     func testIsMediumGrayDark() {
-        let mediumGray = Sweetercolor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+        let mediumGray = UIColor(r: 0.5, g: 0.5, b: 0.5, a: 1)
         XCTAssertTrue(mediumGray.isDarkColor, "Medium gray is a dark color.")
     }
     
     func testIsLightGrayDark() {
-        let lightGray = Sweetercolor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)
+        let lightGray = UIColor(r: 0.75, g: 0.75, b: 0.75, a: 1)
         XCTAssertFalse(lightGray.isDarkColor, "Light gray is not a dark color.")
     }
     

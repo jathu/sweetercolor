@@ -14,8 +14,8 @@ class CIE94_Test: XCTestCase {
     // Test source: http://colormine.org/delta-e-calculator/cie94
     
     func testBlackWhite() {
-        let black = Sweetercolor.black()
-        let white = Sweetercolor.white()
+        let black = UIColor.black()
+        let white = UIColor.white()
         let expected: CGFloat = 100
         
         // As ColorMine rounds the numbers, we do too
@@ -24,8 +24,8 @@ class CIE94_Test: XCTestCase {
     }
     
     func testMagentaOrange() {
-        let magenta = Sweetercolor(red: 255, green: 0, blue: 150, alpha: 1)
-        let orange  = Sweetercolor(red: 255, green: 150, blue: 0, alpha: 1)
+        let magenta = UIColor(r: 255, g: 0, b: 150, a: 1)
+        let orange  = UIColor(r: 255, g: 150, b: 0, a: 1)
         let expected: CGFloat = 46.7143
         
         // As ColorMine rounds the numbers, we do too

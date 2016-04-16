@@ -14,7 +14,7 @@ class LAB_Test: XCTestCase {
     // Test source: http://colormine.org/convert/rgb-to-lab
 
     func testBlack() {
-        let color = Sweetercolor.black().LAB
+        let color = UIColor.black().LAB
         let expect:[CGFloat] = [0, 0, 0]
         
         XCTAssertEqual(color[0].rnd, expect[0].rnd, "")
@@ -23,7 +23,7 @@ class LAB_Test: XCTestCase {
     }
     
     func testWhite() {
-        let color = Sweetercolor.white().LAB
+        let color = UIColor.white().LAB
         let expect:[CGFloat] = [100, 0.00526049995830391, -0.010408184525267927]
         
         XCTAssertEqual(color[0].rnd, expect[0].rnd, "")
@@ -32,7 +32,7 @@ class LAB_Test: XCTestCase {
     }
     
     func testRandomColor() {
-        let color = Sweetercolor(red: 2, green: 8, blue: 94, alpha: 1).LAB
+        let color = UIColor(r: 2, g: 8, b: 94, a: 1).LAB
         let expect:[CGFloat] = [8.947414060170729, 33.48449601168331, -49.19236878079187]
         
         XCTAssertEqual(color[0].rnd, expect[0].rnd, "")
