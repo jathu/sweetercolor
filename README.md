@@ -19,7 +19,7 @@ container.backgroundColor = pink
 
 let label = UILabel(frame: container.frame)
 label.text = "Sweet"
-label.textColor = sun.color
+label.textColor = sun
 
 // Example of overlay similar to Photoshop with reduced alpha
 label.layer.shadowColor = pink.overlayBlack.withAlpha(0.6).CGColor
