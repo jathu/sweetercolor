@@ -40,7 +40,6 @@ Each method is documented using headerdocs. This is just an overview.
 
 | Variable/Method | Description | Return Type |
 |--------|-------------| -------|
-| **color** | Get a UIColor | UIColor |
 | **RGBA** | Get the red, green, blue and alpha values. | [CGFloat] |
 | **RGBA_8Bit** | Get the 8 bit red, green, blue and alpha values. | [CGFloat] |
 | **HSBA** | Get the hue, saturation, brightness and alpha values. | [CGFloat] |
