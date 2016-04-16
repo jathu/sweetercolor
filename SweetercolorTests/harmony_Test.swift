@@ -14,7 +14,7 @@ class harmony_Test: XCTestCase {
     // Test source: http://www.sessions.edu/color-calculator
     
     func testBlack() {
-        let black = Sweetercolor.black()
+        let black = UIColor.black()
         
         XCTAssertEqual(black.complement, black, "")
         XCTAssertEqual(black.splitcomplement, [black, black], "")
@@ -23,7 +23,7 @@ class harmony_Test: XCTestCase {
     }
     
     func testWhite() {
-        let white = Sweetercolor.black()
+        let white = UIColor.black()
         
         XCTAssertEqual(white.complement, white, "")
         XCTAssertEqual(white.splitcomplement, [white, white], "")
@@ -32,21 +32,21 @@ class harmony_Test: XCTestCase {
     }
     
     func testSwiftYellow() {
-        let color = Sweetercolor(hex: 0xFFAC45)
+        let color = UIColor(hex: 0xFFAC45)
         
-        XCTAssertEqual(color.complement, Sweetercolor(hex: 0x4599FF), "")
-        XCTAssertEqual(color.splitcomplement, [Sweetercolor(hex: 0x4E45FF), Sweetercolor(hex: 0x45F6FF)], "")
-        XCTAssertEqual(color.analogous, [Sweetercolor(hex: 0xF6FF45), Sweetercolor(hex: 0xFF4E45)], "")
-        XCTAssertEqual(color.triad, [Sweetercolor(hex: 0xAB45FF), Sweetercolor(hex: 0x45FFAB)], "")
+        XCTAssertEqual(color.complement, UIColor(hex: 0x4599FF), "")
+        XCTAssertEqual(color.splitcomplement, [UIColor(hex: 0x4E45FF), UIColor(hex: 0x45F6FF)], "")
+        XCTAssertEqual(color.analogous, [UIColor(hex: 0xF6FF45), UIColor(hex: 0xFF4E45)], "")
+        XCTAssertEqual(color.triad, [UIColor(hex: 0xAB45FF), UIColor(hex: 0x45FFAB)], "")
     }
     
     func testMyBeautifulDarkTwistedPink() {
-        let color = Sweetercolor(hex: 0xC6143B)
+        let color = UIColor(hex: 0xC6143B)
         
-        XCTAssertEqual(color.complement, Sweetercolor(hex: 0x14C69F), "")
-        XCTAssertEqual(color.splitcomplement, [Sweetercolor(hex: 0x1494C6), Sweetercolor(hex: 0x14C647)], "")
-        XCTAssertEqual(color.analogous, [Sweetercolor(hex: 0xC64714), Sweetercolor(hex: 0xC61494)], "")
-        XCTAssertEqual(color.triad, [Sweetercolor(hex: 0x143BC6), Sweetercolor(hex: 0x3BC614)], "")
+        XCTAssertEqual(color.complement, UIColor(hex: 0x14C69F), "")
+        XCTAssertEqual(color.splitcomplement, [UIColor(hex: 0x1494C6), UIColor(hex: 0x14C647)], "")
+        XCTAssertEqual(color.analogous, [UIColor(hex: 0xC64714), UIColor(hex: 0xC61494)], "")
+        XCTAssertEqual(color.triad, [UIColor(hex: 0x143BC6), UIColor(hex: 0x3BC614)], "")
     }
     
 }

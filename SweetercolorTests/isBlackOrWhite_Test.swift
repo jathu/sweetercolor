@@ -12,19 +12,19 @@ import XCTest
 class isBlackOrWhite_Test: XCTestCase {
     
     func testBlack() {
-        XCTAssertTrue(Sweetercolor.black().isBlackOrWhite, "Black is black or white.")
+        XCTAssertTrue(UIColor.black().isBlackOrWhite, "Black is black or white.")
     }
     
     func testWhite() {
-        XCTAssertTrue(Sweetercolor.white().isBlackOrWhite, "White is black or white.")
+        XCTAssertTrue(UIColor.white().isBlackOrWhite, "White is black or white.")
     }
     
     func testRed() {
-        XCTAssertFalse(Sweetercolor.red().isBlackOrWhite, "Red is not black or white.")
+        XCTAssertFalse(UIColor.redColor().isBlackOrWhite, "Red is not black or white.")
     }
     
     func testGray() {
-        XCTAssertFalse(Sweetercolor.gray().isBlackOrWhite, "Gray is not black or white.")
+        XCTAssertFalse(UIColor.grayColor().isBlackOrWhite, "Gray is not black or white.")
     }
     
 }

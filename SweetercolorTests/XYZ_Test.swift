@@ -14,7 +14,7 @@ class XYZ_Test: XCTestCase {
     // Test source: http://colormine.org/convert/rgb-to-xyz
     
     func testBlack() {
-        let color = Sweetercolor.black().XYZ
+        let color = UIColor.black().XYZ
         let expect:[CGFloat] = [0, 0, 0]
         XCTAssertEqual(color[0].rnd, expect[0].rnd, "")
         XCTAssertEqual(color[1].rnd, expect[1].rnd, "")
@@ -22,7 +22,7 @@ class XYZ_Test: XCTestCase {
     }
     
     func testWhite() {
-        let color = Sweetercolor.white().XYZ
+        let color = UIColor.white().XYZ
         let expect:[CGFloat] = [95.05, 100, 108.9]
         
         XCTAssertEqual(color[0].rnd, expect[0].rnd, "")
@@ -31,7 +31,7 @@ class XYZ_Test: XCTestCase {
     }
     
     func testRandomColor() {
-        let color = Sweetercolor(red: 2, green: 8, blue: 94, alpha: 1).XYZ
+        let color = UIColor(r: 2, g: 8, b: 94, a: 1).XYZ
         let expect:[CGFloat] = [2.1322482275129055, 0.9947240952302578, 10.669293213205593]
         
         XCTAssertEqual(color[0].rnd, expect[0].rnd, "")
