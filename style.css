@@ -1,70 +1,126 @@
 body, html {
   width: 100%;
   height: 100%;
-}
-
-body {
-  background: #FFF;
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 24px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   font-weight: 400;
 }
 
-#container {
+a, a:visited, h1, h2 {
+  color: #0079c1;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 100px 0px;
   position: relative;
-  width: 1000px;
-  padding: 0px calc(50% - 500px);
-  height: 100vh;
   overflow: hidden;
-  text-align: left;
-
-  background-color: #FFE01B;
-  background-image: url(images/banana.png);
-  background-repeat: no-repeat;
-  background-position: calc(50% + 500px - 175px) calc(100% - 50px);
-  background-size: 350px auto;
 }
 
-#container #container-title {
-  color: #0079C1;
-  margin: 100px 0px 0px 0px;
-  font-size: 30px;
-  font-weight: 200;
-}
-
-#container #container-title p {
-  margin: 0px;
-  padding: 0;
-}
-
-#container button {
-  margin: 50px 0px;
-  background: none;
-  border: 2px solid #0079C1;
-  color: #0079C1;
-  padding: 10px 15px;
-  font-size: 12px;
-  font-weight: bold;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+a {
   cursor: pointer;
-  outline: none;
-
-  opacity: 0.6;
-  -webkit-transition: opacity 100ms;
-	-moz-transition:  opacity 100ms;
-	-ms-transition:  opacity 100ms;
-	-o-transition:  opacity 100ms;
-	transition:  opacity 100ms;
+  padding-bottom: 2px;
+  text-decoration: none;
+  border-bottom: 2px solid #0079c1;
 }
 
-#container button:hover {
-  opacity: 1;
+a:hover {
+  padding-bottom: 3px;
 }
 
-#container button:active {
-  margin: 51px 0px;
+h1, h2 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 300;
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+}
+
+#main-container {
+  background: #ffe01b;
+  height: 50%;
+}
+
+img#main-container-banana {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -84px;
+}
+
+h1#main-container-title {
+  font-weight: 700;
+  position: absolute;
+  top: 52%;
+  left: 52%;
+  font-style: italic;
+  text-shadow: 0px 30px 30px #ffc100;
+}
+
+#info-container {
+  text-align: center;
+}
+
+#info-container h2 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+#example-container {
+  background: #f38aba;
+}
+
+#example-container-code {
+  font-family: Courier, monospace;
+  width: auto;
+  display: inline-block;
+  text-align: left;
+}
+
+#example-container-code p {
+  margin: 5px 0px;
+}
+
+#example-container-code .example-container-comment {
+  color: #a24871;
+  font-style: italic;
+}
+
+#example-container .example-container-image {
+  width: 400px;
+  height: 75px;
+  margin-top: 75px;
+  background-image: url(https://raw.githubusercontent.com/jathu/sweetercolor/master/Images/preview.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#included-container {
+  padding-bottom: 0;
+}
+
+#included-container ul {
+  list-style-type: none;
+  width: 50%;
+  padding: 0px 25%;
+  margin: 50px 0px 0px 0px;
+  line-height: 26px;
+}
+
+#included-container li {
+  padding: 10px;
+  margin: 0px;
+}
+
+#included-container p {
+  margin-left: 20px;
+  opacity: 0.75;
+  font-style: italic;
 }

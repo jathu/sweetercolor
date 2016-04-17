@@ -8,16 +8,184 @@
   <meta name="keywords" content="swift, color, library, overlay, photoshop swift, blending mode, blend colors, contrast colors">
   <meta name="author" content="Jathu Satkunarajah">
 </head>
-<body><center>
+<body>
 
-  <div id="container">
-    <div id="container-title">
-      <p><b>Sweetercolor,</b> a color</p>
-      <p>extension library for Swift.</p>
-
-      <a href="https://github.com/jathu/sweetercolor"><button type="button">Fork on GitHub</button></a>
-    </div>
+  <div id="main-container" class="container">
+    <img src="images/banana.png" id="main-container-banana" />
+    <h1 id="main-container-title">Sweetercolor</h1>
   </div>
 
-</center></body>
+  <div id="info-container" class="container">
+    <h1>Sweetercolor is a color extension library for Swift.* <a href="https://github.com/jathu/sweetercolor">Fork on GitHub.</a></h1>
+    <h2>*It has Photoshop style color blending!</h2>
+  </div>
+
+  <div id="example-container" class="container">
+    <center>
+    <div id="example-container-code">
+      <p class="example-container-comment">// Example of hex initializer</p>
+      <p>let sun = UIColor(hex: 0xFBF002)</p>
+      <p class="example-container-comment">// Example of RGB 0-255 initializer</p>
+      <p>let pink = UIColor(r: 243, g: 137, b: 185)</p>
+      <br />
+      <p>let container = UIView(frame: CGRectMake(0, 0, 888, 250))</p>
+      <p>container.backgroundColor = pink</p>
+      <br />
+      <p>let label = UILabel(frame: container.frame)</p>
+      <p>label.text = "Sweet"</p>
+      <p>label.textColor = sun</p>
+      <br />
+      <p class="example-container-comment">// Example of overlay similar to Photoshop with reduced alpha</p>
+      <p class="example-container-comment">// This allows us to get a more natural ambient shadow</p>
+      <p>label.layer.shadowColor = pink.overlayBlack.withAlpha(0.6).CGColor</p>
+    </div>
+    <div class="example-container-image"></div>
+    </center>
+  </div>
+
+  <div id="included-container" class="container">
+    <h1>Included methods</h1>
+    <ul>
+      <li><div class="included-container-box">
+          <h3>RGBA &#8594; [CGFloat]</h3>
+          <p>Get the red, green, blue and alpha values. (0-1).</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>RGBA_8Bit &#8594; [CGFloat]</h3>
+          <p>Get the 8 bit red, green, blue and alpha values. (0-255).</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>HSBA &#8594; [CGFloat]</h3>
+          <p>Get the hue, saturation, brightness and alpha values. (0-1).</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>HSBA_8Bit &#8594; [CGFloat]</h3>
+          <p>Get the 8 bit hue, saturation, brightness and alpha values. (0-255).</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>XYZ &#8594; [CGFloat]</h3>
+          <p>Get the CIE XYZ values.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>LAB &#8594; [CGFloat]</h3>
+          <p>Get the CIE L*ab values.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>luminance &#8594; CGFloat</h3>
+          <p>Get the relative luminosity value of the color. This follows the W3 specs of luminosity to give weight to colors which humans perceive more of.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>isDarkColor &#8594; Bool</h3>
+          <p>Determine if the color is dark based on the relative luminosity of the color.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>isLightColor &#8594; Bool</h3>
+          <p>Determine if the color is light based on the relative luminosity of the color.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>isDarkerThan(compareColor: UIColor) &#8594; Bool</h3>
+          <p>Determine if this colors is darker than the compared color based on the relative luminosity of both colors.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>isLighterThan(compareColor: UIColor) &#8594; Bool</h3>
+          <p>Determine if this colors is lighter than the compared color based on the relative luminosity of both colors.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>isBlackOrWhite &#8594; Bool</h3>
+          <p>Determine if this color is either black or white.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>CIE94(compareColor: UIColor) &#8594; CGFloat</h3>
+          <p>Detemine the distance between two colors based on the way humans perceive them. Uses the CIE94 algorithm.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>CIEDE2000(compareColor: UIColor) &#8594; CGFloat</h3>
+          <p>Detemine the distance between two colors based on the way humans perceive them. Uses the Sharma 2004 alteration of the CIEDE2000 algorithm.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>contrastRatio(compareColor: UIColor) &#8594; CGFloat</h3>
+          <p>Determine the contrast ratio between two colors. A low ratio implies there is a smaller contrast between the two colors. A higher ratio implies there is a larger contrast between the two colors.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>isContrastingColor(compareColor: UIColor, strict: Bool) &#8594; Bool</h3>
+          <p>Determine if two colors are contrasting or not based on the W3 standard.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>fullContrastColor &#8594; UIColor</h3>
+          <p>Get either black or white to contrast against a color.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>withAlpha(newAlpha: CGFloat) &#8594; UIColor</h3>
+          <p>Get a clone of this color with a different alpha value.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>overlay(mask: UIColor) &#8594; UIColor</h3>
+          <p>Get a new color with a mask overlay blend mode on top of this color. This is similar to Photoshop's overlay blend mode.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>overlayBlack &#8594; UIColor</h3>
+          <p>Get a new color if a black overlay was applied.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>overlayWhite &#8594; UIColor</h3>
+          <p>Get a new color if a white overlay was applied.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>multiply(mask: UIColor) &#8594; UIColor</h3>
+          <p>Get a new color with a mask multiply blend mode on top of this color. This is similar to Photoshop's multiply blend mode.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>screen(mask: UIColor) &#8594; UIColor</h3>
+          <p>Get a new color with a mask screen blend mode on top of this color. This is similar to Photoshop's screen blend mode.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>complement &#8594; UIColor</h3>
+          <p>Get the complement of this color on the hue wheel.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>splitComplement &#8594; [UIColor]</h3>
+          <p>Get the split complements of this color on the hue wheel.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>analogous &#8594; [UIColor]</h3>
+          <p>Get the analogous colors of this color on the hue wheel.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
+          <h3>triad &#8594; [UIColor]</h3>
+          <p>Get the triad colors of this color on the hue wheel.</p>
+      </div></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h1><a href="https://github.com/jathu/sweetercolor">GitHub</a></h1>
+  </div>
+
+</body>
 </html>
