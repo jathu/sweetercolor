@@ -488,8 +488,7 @@ extension UIColor {
         - returns: A Sweetercolor clone with the new alpha.
     */
     func withAlpha(newAlpha: CGFloat) -> UIColor {
-        let RGB = self.RGBA
-        return UIColor(r: RGB[0], g: RGB[1], b: RGB[2], a: newAlpha)
+        return self.colorWithAlphaComponent(newAlpha)
     }
     
     
