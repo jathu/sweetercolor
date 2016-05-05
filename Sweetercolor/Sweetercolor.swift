@@ -14,7 +14,7 @@ extension UIColor {
     
     
     /**
-        Create a Sweetercolor with a hex value.
+        Create a UIColor with a hex value.
      
         - parameter hex:     The hex color, i.e. 0xFF0072.
         - parameter alpha:   The opacity of the color, value between [0,1]. Optional. Default: 1
@@ -29,7 +29,7 @@ extension UIColor {
     
     
     /**
-        Create a Sweetercolor with a RGB(A) values. The RGB values must *ALL*
+        Create a UIColor with a RGB(A) values. The RGB values must *ALL*
         either be between [0, 1] OR [0, 255], do not interchange between either one.
      
         - parameter r:   Red value between [0, 1] OR [0, 255].
@@ -48,7 +48,7 @@ extension UIColor {
     
     
     /**
-        Create a Sweetercolor with a HSB(A) values.
+        Create a UIColor with a HSB(A) values.
      
         - parameter h:   Hue value between [0, 1] OR [0, 360].
         - parameter s:   Saturation value between [0, 1] OR [0, 100].
@@ -243,7 +243,7 @@ extension UIColor {
     /**
         Determine if this colors is darker than the compared color based on the relative luminosity of both colors.
      
-        - parameter compareColor: A Sweetercolor to compare.
+        - parameter compareColor: A UIColor to compare.
      
         - returns: A boolean: true if this colors is darker than the compared color and false if otherwise.
     */
@@ -256,7 +256,7 @@ extension UIColor {
     /**
         Determine if this colors is lighter than the compared color based on the relative luminosity of both colors.
      
-        - parameter compareColor: A Sweetercolor to compare.
+        - parameter compareColor: A UIColor to compare.
      
         - returns: A boolean: true if this colors is lighter than the compared color and false if otherwise.
     */
@@ -284,7 +284,7 @@ extension UIColor {
     /**
         Detemine the distance between two colors based on the way humans perceive them.
      
-        - parameter compareColor: A Sweetercolor to compare.
+        - parameter compareColor: A UIColor to compare.
      
         - returns: A CGFloat representing the deltaE
     */
@@ -332,7 +332,7 @@ extension UIColor {
         Detemine the distance between two colors based on the way humans perceive them.
         Uses the Sharma 2004 alteration of the CIEDE2000 algorithm.
      
-        - parameter compareColor: A Sweetercolor to compare.
+        - parameter compareColor: A UIColor to compare.
      
         - returns: A CGFloat representing the deltaE
     */
@@ -430,7 +430,7 @@ extension UIColor {
         A low ratio implies there is a smaller contrast between the two colors.
         A higher ratio implies there is a larger contrast between the two colors.
      
-        - parameter compareColor: A Sweetercolor to compare.
+        - parameter compareColor: A UIColor to compare.
      
         - returns: A CGFloat representing the contrast ratio of the two colors.
     */
@@ -452,7 +452,7 @@ extension UIColor {
     /**
         Determine if two colors are contrasting or not based on the W3 standard.
      
-        - parameter compareColor:    A Sweetercolor to compare.
+        - parameter compareColor:    A UIColor to compare.
         - parameter strict:          A boolean, if true a stricter judgment of contrast ration will be used. Optional. Default: false
      
         - returns: a boolean, true of the two colors are contrasting, false otherwise.
@@ -469,7 +469,7 @@ extension UIColor {
     /**
         Get either black or white to contrast against a color.
      
-        - returns: A Sweetercolor, either black or white to contrast against this color.
+        - returns: A UIColor, either black or white to contrast against this color.
     */
     var fullContrastColor: UIColor {
         let RGBA = self.RGBA
@@ -485,7 +485,7 @@ extension UIColor {
      
         - parameter newAlpha: The opacity of the new color, value from [0, 1]
      
-        - returns: A Sweetercolor clone with the new alpha.
+        - returns: A UIColor clone with the new alpha.
     */
     func withAlpha(newAlpha: CGFloat) -> UIColor {
         return self.colorWithAlphaComponent(newAlpha)
@@ -497,9 +497,9 @@ extension UIColor {
         Get a new color with a mask overlay blend mode on top of this color.
         This is similar to Photoshop's overlay blend mode.
      
-        - parameter mask: A Sweetercolor to apply as an overlay mask on top.
+        - parameter mask: A UIColor to apply as an overlay mask on top.
      
-        - returns: A Sweetercolor with the applied overlay.
+        - returns: A UIColor with the applied overlay.
     */
     func overlay(mask: UIColor) -> UIColor {
         let mainRGBA = self.RGBA
@@ -524,7 +524,7 @@ extension UIColor {
     /**
         Get a new color if a black overlay was applied.
      
-        - returns: A Sweetercolor with a black overlay.
+        - returns: A UIColor with a black overlay.
     */
     var overlayBlack: UIColor {
         return self.overlay(UIColor.black())
@@ -535,7 +535,7 @@ extension UIColor {
     /**
         Get a new color if a white overlay was applied.
      
-        - returns: A Sweetercolor with a white overlay.
+        - returns: A UIColor with a white overlay.
     */
     var overlayWhite: UIColor {
         return self.overlay(UIColor.white())
@@ -547,9 +547,9 @@ extension UIColor {
         Get a new color with a mask multiply blend mode on top of this color.
         This is similar to Photoshop's multiply blend mode.
      
-        - parameter mask: A Sweetercolor to apply as a multiply mask on top.
+        - parameter mask: A UIColor to apply as a multiply mask on top.
      
-        - returns: A Sweetercolor with the applied multiply blend mode.
+        - returns: A UIColor with the applied multiply blend mode.
     */
     func multiply(mask: UIColor) -> UIColor {
         let mainRGBA = self.RGBA
@@ -569,9 +569,9 @@ extension UIColor {
         Get a new color with a mask screen blend mode on top of this color.
         This is similar to Photoshop's screen blend mode.
      
-        - parameter mask: A Sweetercolor to apply as a screen mask on top.
+        - parameter mask: A UIColor to apply as a screen mask on top.
      
-        - returns: A Sweetercolor with the applied screen blend mode.
+        - returns: A UIColor with the applied screen blend mode.
     */
     func screen(mask: UIColor) -> UIColor {
         let mainRGBA = self.RGBA
@@ -606,7 +606,7 @@ extension UIColor {
     /**
         Get the complement of this color on the hue wheel.
      
-        - returns: A complement Sweetercolor.
+        - returns: A complement UIColor.
     */
     var complement: UIColor {
         return self.harmony(180)
@@ -617,7 +617,7 @@ extension UIColor {
     /**
         Get the split complements of this color on the hue wheel.
      
-        - returns: An array of two complement Sweetercolors.
+        - returns: An array of two complement UIColors.
     */
     var splitcomplement: [UIColor] {
         return [self.harmony(150), self.harmony(-150)]
@@ -628,7 +628,7 @@ extension UIColor {
     /**
         Get the analogous colors of this color on the hue wheel.
      
-        - returns: An array of two analogous Sweetercolors.
+        - returns: An array of two analogous UIColors.
     */
     var analogous: [UIColor] {
         return [self.harmony(30), self.harmony(-30)]
@@ -639,7 +639,7 @@ extension UIColor {
     /**
         Get the triad colors of this color on the hue wheel.
      
-        - returns: An array of two triad Sweetercolors.
+        - returns: An array of two triad UIColors.
     */
     var triad: [UIColor] {
         return [self.harmony(120), self.harmony(-120)]
