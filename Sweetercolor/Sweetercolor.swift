@@ -268,7 +268,7 @@ extension UIColor {
     /**
         Determine if this colors is darker than the compared color based on the relative luminosity of both colors.
      
-        - parameter compareColor: A UIColor to compare.
+        - parameter than color: A UIColor to compare.
      
         - returns: A boolean: true if this colors is darker than the compared color and false if otherwise.
     */
@@ -281,7 +281,7 @@ extension UIColor {
     /**
         Determine if this colors is lighter than the compared color based on the relative luminosity of both colors.
      
-        - parameter compareColor: A UIColor to compare.
+        - parameter than color: A UIColor to compare.
      
         - returns: A boolean: true if this colors is lighter than the compared color and false if otherwise.
     */
@@ -309,7 +309,7 @@ extension UIColor {
     /**
         Detemine the distance between two colors based on the way humans perceive them.
      
-        - parameter compareColor: A UIColor to compare.
+        - parameter compare color: A UIColor to compare.
      
         - returns: A CGFloat representing the deltaE
     */
@@ -357,7 +357,7 @@ extension UIColor {
         Detemine the distance between two colors based on the way humans perceive them.
         Uses the Sharma 2004 alteration of the CIEDE2000 algorithm.
      
-        - parameter compareColor: A UIColor to compare.
+        - parameter compare color: A UIColor to compare.
      
         - returns: A CGFloat representing the deltaE
     */
@@ -455,7 +455,7 @@ extension UIColor {
         A low ratio implies there is a smaller contrast between the two colors.
         A higher ratio implies there is a larger contrast between the two colors.
      
-        - parameter compareColor: A UIColor to compare.
+        - parameter with color: A UIColor to compare.
      
         - returns: A CGFloat representing the contrast ratio of the two colors.
     */
@@ -477,7 +477,7 @@ extension UIColor {
     /**
         Determine if two colors are contrasting or not based on the W3 standard.
      
-        - parameter compareColor:    A UIColor to compare.
+        - parameter with color:      A UIColor to compare.
         - parameter strict:          A boolean, if true a stricter judgment of contrast ration will be used. Optional. Default: false
      
         - returns: a boolean, true of the two colors are contrasting, false otherwise.
@@ -522,7 +522,7 @@ extension UIColor {
         Get a new color with a mask overlay blend mode on top of this color.
         This is similar to Photoshop's overlay blend mode.
      
-        - parameter mask: A UIColor to apply as an overlay mask on top.
+        - parameter with color: A UIColor to apply as an overlay mask on top.
      
         - returns: A UIColor with the applied overlay.
     */
@@ -572,7 +572,7 @@ extension UIColor {
         Get a new color with a mask multiply blend mode on top of this color.
         This is similar to Photoshop's multiply blend mode.
      
-        - parameter mask: A UIColor to apply as a multiply mask on top.
+        - parameter with color: A UIColor to apply as a multiply mask on top.
      
         - returns: A UIColor with the applied multiply blend mode.
     */
@@ -594,7 +594,7 @@ extension UIColor {
         Get a new color with a mask screen blend mode on top of this color.
         This is similar to Photoshop's screen blend mode.
      
-        - parameter mask: A UIColor to apply as a screen mask on top.
+        - parameter with color: A UIColor to apply as a screen mask on top.
      
         - returns: A UIColor with the applied screen blend mode.
     */
