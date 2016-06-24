@@ -17,52 +17,52 @@ class screen_Test: XCTestCase {
         let color = UIColor(hex: 0x000000)
         
         // Screen black
-        XCTAssertEqual(color.screen(UIColor.black()), UIColor(hex: 0x000000), "")
+        XCTAssertTrue(color.screen(with: UIColor.black()).isEqual(to: UIColor.black(), strict: false))
         
         // Screen white
-        XCTAssertEqual(color.screen(UIColor.white()), UIColor(hex: 0xFFFFFF), "")
+        XCTAssertTrue(color.screen(with: UIColor.white()).isEqual(to: UIColor.white(), strict: false))
         
         // Screen blue
-        XCTAssertEqual(color.screen(UIColor.blueColor()), UIColor(hex: 0x0000FF), "")
+        XCTAssertTrue(color.screen(with: UIColor.blue()).isEqual(to: UIColor(hex: 0x0000FF), strict: false))
     }
     
     func testWhite() {
         let color = UIColor(hex: 0xFFFFFF)
         
         // Screen black
-        XCTAssertEqual(color.screen(UIColor.black()), UIColor(hex: 0xFFFFFF), "")
+        XCTAssertTrue(color.screen(with: UIColor.black()).isEqual(to: UIColor.white(), strict: false))
         
         // Screen white
-        XCTAssertEqual(color.screen(UIColor.white()), UIColor(hex: 0xFFFFFF), "")
+        XCTAssertTrue(color.screen(with: UIColor.white()).isEqual(to: UIColor.white(), strict: false))
         
         // Screen blue
-        XCTAssertEqual(color.screen(UIColor.blueColor()), UIColor(hex: 0xFFFFFF), "")
+        XCTAssertTrue(color.screen(with: UIColor.blue()).isEqual(to: UIColor.white(), strict: false))
     }
     
     func testSwiftYellow() {
         let color = UIColor(hex: 0xFFAC45)
         
         // Screen black
-        XCTAssertEqual(color.screen(UIColor.black()), UIColor(hex: 0xFFAC45), "")
+        XCTAssertTrue(color.screen(with: UIColor.black()).isEqual(to: UIColor(hex: 0xFFAC45), strict: false))
         
         // Screen white
-        XCTAssertEqual(color.screen(UIColor.white()), UIColor(hex: 0xFFFFFF), "")
+        XCTAssertTrue(color.screen(with: UIColor.white()).isEqual(to: UIColor(hex: 0xFFFFFF), strict: false))
         
         // Screen blue
-        XCTAssertEqual(color.screen(UIColor.blueColor()), UIColor(hex: 0xFFACFF), "")
+        XCTAssertTrue(color.screen(with: UIColor.blue()).isEqual(to: UIColor(hex: 0xFFACFF), strict: false))
     }
     
     func testMyBeautifulDarkTwistedPink() {
         let color = UIColor(hex: 0xC6143B)
         
         // Screen black
-        XCTAssertEqual(color.screen(UIColor.black()), UIColor(hex: 0xC6143B), "")
+        XCTAssertTrue(color.screen(with: UIColor.black()).isEqual(to: UIColor(hex: 0xC6143B), strict: false))
         
         // Screen white
-        XCTAssertEqual(color.screen(UIColor.white()), UIColor(hex: 0xFFFFFF), "")
+        XCTAssertTrue(color.screen(with: UIColor.white()).isEqual(to: UIColor(hex: 0xFFFFFF), strict: false))
         
         // Screen blue
-        XCTAssertEqual(color.screen(UIColor.blueColor()), UIColor(hex: 0xC614FF), "")
+        XCTAssertTrue(color.screen(with: UIColor.blue()).isEqual(to: UIColor(hex: 0xC614FF), strict: false))
     }
     
 }

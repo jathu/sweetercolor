@@ -10,9 +10,8 @@ import UIKit
 
 extension CGFloat {
     
-    var rnd: CGFloat {
-        let scale: CGFloat = 10000000000
-        return round(self * scale)/scale
+    func residualCompare(with number: CGFloat) -> Bool {
+        return abs(number - self) <= abs(self*0.01)
     }
     
 }

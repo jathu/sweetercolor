@@ -12,7 +12,7 @@
 		87A1600D1B7C07730024D7B0 /* Sweetercolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1600C1B7C07730024D7B0 /* Sweetercolor.swift */; };
 		87A1600E1B7C088A0024D7B0 /* Sweetercolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1600C1B7C07730024D7B0 /* Sweetercolor.swift */; };
 		87A160101B7C0BB70024D7B0 /* fullContrastColor_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1600F1B7C0BB70024D7B0 /* fullContrastColor_Test.swift */; };
-		87DB9B561B7C234A00BBB3E7 /* isDarkColor_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DB9B551B7C234A00BBB3E7 /* isDarkColor_Test.swift */; };
+		87DB9B561B7C234A00BBB3E7 /* isDark_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DB9B551B7C234A00BBB3E7 /* isDark_Test.swift */; };
 		87DB9B591B7C2C6600BBB3E7 /* isBlackOrWhite_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DB9B581B7C2C6600BBB3E7 /* isBlackOrWhite_Test.swift */; };
 		87DB9B5D1B7C43EE00BBB3E7 /* XYZ_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DB9B5C1B7C43EE00BBB3E7 /* XYZ_Test.swift */; };
 		87DB9B5F1B7C4A6600BBB3E7 /* LAB_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DB9B5E1B7C4A6600BBB3E7 /* LAB_Test.swift */; };
@@ -44,7 +44,7 @@
 		87A160011B7C074D0024D7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A1600C1B7C07730024D7B0 /* Sweetercolor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sweetercolor.swift; sourceTree = "<group>"; };
 		87A1600F1B7C0BB70024D7B0 /* fullContrastColor_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fullContrastColor_Test.swift; sourceTree = "<group>"; };
-		87DB9B551B7C234A00BBB3E7 /* isDarkColor_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = isDarkColor_Test.swift; sourceTree = "<group>"; };
+		87DB9B551B7C234A00BBB3E7 /* isDark_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = isDark_Test.swift; sourceTree = "<group>"; };
 		87DB9B581B7C2C6600BBB3E7 /* isBlackOrWhite_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = isBlackOrWhite_Test.swift; sourceTree = "<group>"; };
 		87DB9B5C1B7C43EE00BBB3E7 /* XYZ_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZ_Test.swift; sourceTree = "<group>"; };
 		87DB9B5E1B7C4A6600BBB3E7 /* LAB_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LAB_Test.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				87DB9B5C1B7C43EE00BBB3E7 /* XYZ_Test.swift */,
 				87DB9B5E1B7C4A6600BBB3E7 /* LAB_Test.swift */,
 				87FB9C1A1B7DFE5500AC9BFF /* CIE94_Test.swift */,
-				87DB9B551B7C234A00BBB3E7 /* isDarkColor_Test.swift */,
+				87DB9B551B7C234A00BBB3E7 /* isDark_Test.swift */,
 				87FB9C1C1B80828900AC9BFF /* isDarkerThan_Test.swift */,
 				87DB9B581B7C2C6600BBB3E7 /* isBlackOrWhite_Test.swift */,
 				87FB9C1E1B80852400AC9BFF /* contrastRatio_Test.swift */,
@@ -207,9 +207,11 @@
 					87A15FEF1B7C074D0024D7B0 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 5CM2SRJAY7;
+						LastSwiftMigration = 0800;
 					};
 					87A15FFA1B7C074D0024D7B0 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -273,7 +275,7 @@
 				87FB9C1D1B80828900AC9BFF /* isDarkerThan_Test.swift in Sources */,
 				87FB9C1F1B80852400AC9BFF /* contrastRatio_Test.swift in Sources */,
 				87DB9B5F1B7C4A6600BBB3E7 /* LAB_Test.swift in Sources */,
-				87DB9B561B7C234A00BBB3E7 /* isDarkColor_Test.swift in Sources */,
+				87DB9B561B7C234A00BBB3E7 /* isDark_Test.swift in Sources */,
 				87FB9C271B80EA8B00AC9BFF /* screen_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +396,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -412,6 +415,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -429,6 +433,7 @@
 				INFOPLIST_FILE = SweetercolorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -442,6 +447,7 @@
 				INFOPLIST_FILE = SweetercolorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

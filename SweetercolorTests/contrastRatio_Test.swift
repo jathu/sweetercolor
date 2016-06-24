@@ -18,8 +18,8 @@ class contrastRatio_Test: XCTestCase {
         let black = UIColor(hex: 0x333333)
 
         // As snook rounds the numbers, we do too
-        let ratio = round(green.contrastRatio(black) * 100)/100
-        XCTAssertEqual(ratio.rnd, 9.32, "")
+        let ratio = round(green.contrastRatio(with: black) * 100)/100
+        XCTAssertTrue(ratio.residualCompare(with: 9.32))
     }
     
     func testMagentaOrange() {
@@ -27,17 +27,17 @@ class contrastRatio_Test: XCTestCase {
         let orange  = UIColor(r: 255, g: 150, b: 0, a: 1)
         
         // As snook rounds the numbers, we do too
-        let ratio = round(magenta.contrastRatio(orange) * 100)/100
-        XCTAssertEqual(ratio.rnd, 1.69, "")
+        let ratio = round(magenta.contrastRatio(with: orange) * 100)/100
+        XCTAssertTrue(ratio.residualCompare(with: 1.69))
     }
     
     func testGrayLightGray() {
-        let gray = UIColor.grayColor()
-        let lightGray = UIColor.lightGrayColor()
+        let gray = UIColor.gray()
+        let lightGray = UIColor.lightGray()
         
         // As snook rounds the numbers, we do too
-        let ratio = round(gray.contrastRatio(lightGray) * 100)/100
-        XCTAssertEqual(ratio.rnd, 1.70, "")
+        let ratio = round(gray.contrastRatio(with: lightGray) * 100)/100
+        XCTAssertTrue(ratio.residualCompare(with: 1.70))
     }
 
 }

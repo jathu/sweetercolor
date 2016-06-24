@@ -19,8 +19,8 @@ class CIE94_Test: XCTestCase {
         let expected: CGFloat = 100
         
         // As ColorMine rounds the numbers, we do too
-        let deltaE = round(black.CIE94(white))
-        XCTAssertEqual(deltaE.rnd, expected.rnd, "")
+        let deltaE = round(black.CIE94(compare: white))
+        XCTAssertTrue(deltaE.residualCompare(with: expected))
     }
     
     func testMagentaOrange() {
@@ -29,8 +29,8 @@ class CIE94_Test: XCTestCase {
         let expected: CGFloat = 46.7143
         
         // As ColorMine rounds the numbers, we do too
-        let deltaE = round(magenta.CIE94(orange) * 10000)/10000
-        XCTAssertEqual(deltaE.rnd, expected.rnd, "")
+        let deltaE = round(magenta.CIE94(compare: orange) * 10000)/10000
+        XCTAssertTrue(deltaE.residualCompare(with: expected))
     }
 
 }

@@ -15,28 +15,28 @@ class isDarkerThan_Test: XCTestCase {
         let black = UIColor.black()
         let white = UIColor.white()
         
-        XCTAssertTrue(black.isDarkerThan(white), "Black is darker than white.")
+        XCTAssertTrue(black.isDarker(than: white), "Black is darker than white.")
     }
     
     func testRedYellow() {
-        let red = UIColor.redColor()
-        let yellow = UIColor.yellowColor()
+        let red = UIColor.red()
+        let yellow = UIColor.yellow()
         
-        XCTAssertTrue(red.isDarkerThan(yellow), "Red is darker than yellow.")
+        XCTAssertTrue(red.isDarker(than: yellow), "Red is darker than yellow.")
     }
     
     func testBlueLightGray() {
-        let blue = UIColor.blueColor()
-        let lightGray = UIColor.lightGrayColor()
+        let blue = UIColor.blue()
+        let lightGray = UIColor.lightGray()
         
-        XCTAssertTrue(blue.isDarkerThan(lightGray), "Blue is darker than light gray.")
+        XCTAssertTrue(blue.isDarker(than: lightGray), "Blue is darker than light gray.")
     }
     
     func testYelloOrange() {
-        let yellow = UIColor.yellowColor()
-        let orange = UIColor.orangeColor()
+        let yellow = UIColor.yellow()
+        let orange = UIColor.orange()
         
-        XCTAssertFalse(yellow.isDarkerThan(orange), "Yellow is NOT darker than orange.")
+        XCTAssertFalse(yellow.isDarker(than: orange), "Yellow is NOT darker than orange.")
     }
 
 }

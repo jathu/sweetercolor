@@ -17,52 +17,52 @@ class multiply_Test: XCTestCase {
         let color = UIColor(hex: 0x000000)
         
         // Overlay black
-        XCTAssertEqual(color.multiply(UIColor.black()), UIColor(hex: 0x000000), "")
+        XCTAssertTrue(color.multiply(with: UIColor.black()).isEqual(to: UIColor.black(), strict: false))
         
         // Overlay white
-        XCTAssertEqual(color.multiply(UIColor.white()), UIColor(hex: 0x000000), "")
+        XCTAssertTrue(color.multiply(with: UIColor.white()).isEqual(to: UIColor.black(), strict: false))
         
         // Overlay blue
-        XCTAssertEqual(color.multiply(UIColor.blueColor()), UIColor(hex: 0x000000), "")
+        XCTAssertTrue(color.multiply(with: UIColor.blue()).isEqual(to: UIColor.black(), strict: false))
     }
     
     func testWhite() {
         let color = UIColor(hex: 0xFFFFFF)
         
         // Overlay black
-        XCTAssertEqual(color.multiply(UIColor.black()), UIColor(hex: 0x000000), "")
+        XCTAssertTrue(color.multiply(with: UIColor.black()).isEqual(to: UIColor.black(), strict: false))
         
         // Overlay white
-        XCTAssertEqual(color.multiply(UIColor.white()), UIColor(hex: 0xFFFFFF), "")
+        XCTAssertTrue(color.multiply(with: UIColor.white()).isEqual(to: UIColor.white(), strict: false))
         
         // Overlay blue
-        XCTAssertEqual(color.multiply(UIColor.blueColor()), UIColor(hex: 0x0000FF), "")
+        XCTAssertTrue(color.multiply(with: UIColor.blue()).isEqual(to: UIColor(hex: 0x0000FF), strict: false))
     }
     
     func testSwiftYellow() {
         let color = UIColor(hex: 0xFFAC45)
         
         // Overlay black
-        XCTAssertEqual(color.multiply(UIColor.black()), UIColor(hex: 0x000000), "")
+        XCTAssertTrue(color.multiply(with: UIColor.black()).isEqual(to: UIColor.black(), strict: false))
         
         // Overlay white
-        XCTAssertEqual(color.multiply(UIColor.white()), UIColor(hex: 0xFFAC45), "")
+        XCTAssertTrue(color.multiply(with: UIColor.white()).isEqual(to: UIColor(hex: 0xFFAC45), strict: false))
         
         // Overlay blue
-        XCTAssertEqual(color.multiply(UIColor.blueColor()), UIColor(hex: 0x000045), "")
+        XCTAssertTrue(color.multiply(with: UIColor.blue()).isEqual(to: UIColor(hex: 0x000045), strict: false))
     }
     
     func testMyBeautifulDarkTwistedPink() {
         let color = UIColor(hex: 0xC6143B)
         
         // Overlay black
-        XCTAssertEqual(color.multiply(UIColor.black()), UIColor(hex: 0x000000), "")
+        XCTAssertTrue(color.multiply(with: UIColor.black()).isEqual(to: UIColor.black(), strict: false))
         
         // Overlay white
-        XCTAssertEqual(color.multiply(UIColor.white()), UIColor(hex: 0xC6143B), "")
+        XCTAssertTrue(color.multiply(with: UIColor.white()).isEqual(to: UIColor(hex: 0xC6143B), strict: false))
         
         // Overlay blue
-        XCTAssertEqual(color.multiply(UIColor.blueColor()), UIColor(hex: 0x00003B), "")
+        XCTAssertTrue(color.multiply(with: UIColor.blue()).isEqual(to: UIColor(hex: 0x00003B), strict: false))
     }
 
 }

@@ -20,11 +20,11 @@ class isBlackOrWhite_Test: XCTestCase {
     }
     
     func testRed() {
-        XCTAssertFalse(UIColor.redColor().isBlackOrWhite, "Red is not black or white.")
+        XCTAssertFalse(UIColor.red().isBlackOrWhite, "Red is not black or white.")
     }
     
     func testGray() {
-        XCTAssertFalse(UIColor.grayColor().isBlackOrWhite, "Gray is not black or white.")
+        XCTAssertFalse(UIColor.gray().isBlackOrWhite, "Gray is not black or white.")
     }
     
 }
