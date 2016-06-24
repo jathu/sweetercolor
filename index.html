@@ -47,6 +47,11 @@
     <h1>Included methods</h1>
     <ul>
       <li><div class="included-container-box">
+          <h3>isEqual(to color: UIColor, strict: Bool = true) &#8594; Bool</h3>
+          <p>Comapre if two colors are equal. When strict is false, color within 1% of the comparing color is considered equal.</p>
+      </div></li>
+
+      <li><div class="included-container-box">
           <h3>RGBA &#8594; [CGFloat]</h3>
           <p>Get the red, green, blue and alpha values. (0-1).</p>
       </div></li>
@@ -82,22 +87,22 @@
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>isDarkColor &#8594; Bool</h3>
+          <h3>isDark &#8594; Bool</h3>
           <p>Determine if the color is dark based on the relative luminosity of the color.</p>
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>isLightColor &#8594; Bool</h3>
+          <h3>isLight &#8594; Bool</h3>
           <p>Determine if the color is light based on the relative luminosity of the color.</p>
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>isDarkerThan(compareColor: UIColor) &#8594; Bool</h3>
+          <h3>isDarker(than color: UIColor) &#8594; Bool</h3>
           <p>Determine if this colors is darker than the compared color based on the relative luminosity of both colors.</p>
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>isLighterThan(compareColor: UIColor) &#8594; Bool</h3>
+          <h3>isLighter(than color: UIColor) &#8594; Bool</h3>
           <p>Determine if this colors is lighter than the compared color based on the relative luminosity of both colors.</p>
       </div></li>
 
@@ -107,22 +112,22 @@
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>CIE94(compareColor: UIColor) &#8594; CGFloat</h3>
+          <h3>CIE94(compare color: UIColor) &#8594; CGFloat</h3>
           <p>Detemine the distance between two colors based on the way humans perceive them. Uses the CIE94 algorithm.</p>
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>CIEDE2000(compareColor: UIColor) &#8594; CGFloat</h3>
+          <h3>CIEDE2000(compare color: UIColor) &#8594; CGFloat</h3>
           <p>Detemine the distance between two colors based on the way humans perceive them. Uses the Sharma 2004 alteration of the CIEDE2000 algorithm.</p>
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>contrastRatio(compareColor: UIColor) &#8594; CGFloat</h3>
+          <h3>contrastRatio(with color: UIColor) &#8594; CGFloat</h3>
           <p>Determine the contrast ratio between two colors. A low ratio implies there is a smaller contrast between the two colors. A higher ratio implies there is a larger contrast between the two colors.</p>
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>isContrastingColor(compareColor: UIColor, strict: Bool) &#8594; Bool</h3>
+          <h3>isContrasting(with color: UIColor, strict: Bool) &#8594; Bool</h3>
           <p>Determine if two colors are contrasting or not based on the W3 standard.</p>
       </div></li>
 
@@ -137,8 +142,8 @@
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>overlay(mask: UIColor) &#8594; UIColor</h3>
-          <p>Get a new color with a mask overlay blend mode on top of this color. This is similar to Photoshop's overlay blend mode.</p>
+          <h3>overlay(with color: UIColor) &#8594; UIColor</h3>
+          <p>Get a new color with an overlay blend mode on top of this color. This is similar to Photoshop's overlay blend mode.</p>
       </div></li>
 
       <li><div class="included-container-box">
@@ -152,33 +157,18 @@
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>multiply(mask: UIColor) &#8594; UIColor</h3>
-          <p>Get a new color with a mask multiply blend mode on top of this color. This is similar to Photoshop's multiply blend mode.</p>
+          <h3>multiply(with color: UIColor) &#8594; UIColor</h3>
+          <p>Get a new color with a multiply blend mode on top of this color. This is similar to Photoshop's multiply blend mode.</p>
       </div></li>
 
       <li><div class="included-container-box">
-          <h3>screen(mask: UIColor) &#8594; UIColor</h3>
-          <p>Get a new color with a mask screen blend mode on top of this color. This is similar to Photoshop's screen blend mode.</p>
+          <h3>screen(with color: UIColor) &#8594; UIColor</h3>
+          <p>Get a new color with a screen blend mode on top of this color. This is similar to Photoshop's screen blend mode.</p>
       </div></li>
 
       <li><div class="included-container-box">
           <h3>complement &#8594; UIColor</h3>
           <p>Get the complement of this color on the hue wheel.</p>
-      </div></li>
-
-      <li><div class="included-container-box">
-          <h3>splitComplement &#8594; [UIColor]</h3>
-          <p>Get the split complements of this color on the hue wheel.</p>
-      </div></li>
-
-      <li><div class="included-container-box">
-          <h3>analogous &#8594; [UIColor]</h3>
-          <p>Get the analogous colors of this color on the hue wheel.</p>
-      </div></li>
-
-      <li><div class="included-container-box">
-          <h3>triad &#8594; [UIColor]</h3>
-          <p>Get the triad colors of this color on the hue wheel.</p>
       </div></li>
     </ul>
   </div>
