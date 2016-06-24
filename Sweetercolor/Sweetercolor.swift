@@ -482,7 +482,7 @@ extension UIColor {
      
         - returns: a boolean, true of the two colors are contrasting, false otherwise.
      */
-    func isContrastingWith(color: UIColor, strict: Bool = false) -> Bool {
+    func isContrasting(with color: UIColor, strict: Bool = false) -> Bool {
         // http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast
         
         let ratio = self.contrastRatio(with: color)
