@@ -14,9 +14,9 @@ class contrastRatio_Test: XCTestCase {
     // Test Source: http://snook.ca/technical/colour_contrast/colour.html
     
     func testGreenBlack() {
-        let green = UIColor(hex: 0x33FF33)
-        let black = UIColor(hex: 0x333333)
-
+        let green = UIColor(hex: "#33FF33")
+        let black = UIColor(hex: "#333333")
+        
         // As snook rounds the numbers, we do too
         let ratio = round(green.contrastRatio(with: black) * 100)/100
         XCTAssertTrue(ratio.residualCompare(with: 9.32))
@@ -32,12 +32,12 @@ class contrastRatio_Test: XCTestCase {
     }
     
     func testGrayLightGray() {
-        let gray = UIColor.gray()
-        let lightGray = UIColor.lightGray()
+        let gray = UIColor.gray
+        let lightGray = UIColor.lightGray
         
         // As snook rounds the numbers, we do too
         let ratio = round(gray.contrastRatio(with: lightGray) * 100)/100
         XCTAssertTrue(ratio.residualCompare(with: 1.70))
     }
-
+    
 }

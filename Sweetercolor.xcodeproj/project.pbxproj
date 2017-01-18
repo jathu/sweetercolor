@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8749902B1E2FC18B007E6171 /* Init_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8749902A1E2FC18B007E6171 /* Init_Test.swift */; };
 		87A15FF61B7C074D0024D7B0 /* Sweetercolor.h in Headers */ = {isa = PBXBuildFile; fileRef = 87A15FF51B7C074D0024D7B0 /* Sweetercolor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87A15FFC1B7C074D0024D7B0 /* Sweetercolor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A15FF01B7C074D0024D7B0 /* Sweetercolor.framework */; };
 		87A1600D1B7C07730024D7B0 /* Sweetercolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1600C1B7C07730024D7B0 /* Sweetercolor.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8749902A1E2FC18B007E6171 /* Init_Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Init_Test.swift; sourceTree = "<group>"; };
 		87A15FF01B7C074D0024D7B0 /* Sweetercolor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sweetercolor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A15FF41B7C074D0024D7B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A15FF51B7C074D0024D7B0 /* Sweetercolor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sweetercolor.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				87FB9C181B7DF77800AC9BFF /* Helpers.swift */,
+				8749902A1E2FC18B007E6171 /* Init_Test.swift */,
 				87DB9B5C1B7C43EE00BBB3E7 /* XYZ_Test.swift */,
 				87DB9B5E1B7C4A6600BBB3E7 /* LAB_Test.swift */,
 				87FB9C1A1B7DFE5500AC9BFF /* CIE94_Test.swift */,
@@ -276,6 +279,7 @@
 				87FB9C1F1B80852400AC9BFF /* contrastRatio_Test.swift in Sources */,
 				87DB9B5F1B7C4A6600BBB3E7 /* LAB_Test.swift in Sources */,
 				87DB9B561B7C234A00BBB3E7 /* isDark_Test.swift in Sources */,
+				8749902B1E2FC18B007E6171 /* Init_Test.swift in Sources */,
 				87FB9C271B80EA8B00AC9BFF /* screen_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

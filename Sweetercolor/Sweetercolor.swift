@@ -8,24 +8,38 @@
 
 import UIKit
 
-
 extension UIColor {
     
-    
-    
     /**
-        Create a UIColor with a hex value.
+        Create a UIColor with a string hex value.
      
-        - parameter hex:     The hex color, i.e. 0xFF0072.
+        - parameter hex:     The hex color, i.e. "FF0072" or "#FF0072".
         - parameter alpha:   The opacity of the color, value between [0,1]. Optional. Default: 1
     */
-    convenience init(hex: Int, alpha: CGFloat = 1) {
-        let R = CGFloat((hex >> 16) & 0xFF)/255
-        let G = CGFloat((hex >> 8) & 0xFF)/255
-        let B = CGFloat(hex & 0xFF)/255
+    convenience init(hex: String, alpha: CGFloat = 1) {
+        var hex = hex.replacingOccurrences(of: "#", with: "")
+        
+        guard hex.characters.count == 3 || hex.characters.count == 6 else {
+            fatalError("Hex characters must be either 3 or 6 characters")
+        }
+        
+        if hex.characters.count == 3 {
+            var tmp = hex
+            hex = ""
+            for c in tmp.characters {
+                hex += String([c,c])
+            }
+        }
+        
+        let scanner = Scanner(string: hex)
+        var rgb: UInt32 = 0
+        scanner.scanHexInt32(&rgb)
+        
+        let R = CGFloat((rgb >> 16) & 0xFF)/255
+        let G = CGFloat((rgb >> 8) & 0xFF)/255
+        let B = CGFloat(rgb & 0xFF)/255
         self.init(red: R, green: G, blue: B, alpha: alpha)
     }
-    
     
     
     /**

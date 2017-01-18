@@ -19,22 +19,22 @@ class isDarkerThan_Test: XCTestCase {
     }
     
     func testRedYellow() {
-        let red = UIColor.red()
-        let yellow = UIColor.yellow()
+        let red = UIColor.red
+        let yellow = UIColor.yellow
         
         XCTAssertTrue(red.isDarker(than: yellow), "Red is darker than yellow.")
     }
     
     func testBlueLightGray() {
-        let blue = UIColor.blue()
-        let lightGray = UIColor.lightGray()
+        let blue = UIColor.blue
+        let lightGray = UIColor.lightGray
         
         XCTAssertTrue(blue.isDarker(than: lightGray), "Blue is darker than light gray.")
     }
     
     func testYelloOrange() {
-        let yellow = UIColor.yellow()
-        let orange = UIColor.orange()
+        let yellow = UIColor.yellow
+        let orange = UIColor.orange
         
         XCTAssertFalse(yellow.isDarker(than: orange), "Yellow is NOT darker than orange.")
     }

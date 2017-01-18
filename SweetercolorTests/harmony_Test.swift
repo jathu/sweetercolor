@@ -10,7 +10,7 @@ import UIKit
 import XCTest
 
 class harmony_Test: XCTestCase {
-
+    
     // Test source: http://www.sessions.edu/color-calculator
     
     func testBlack() {
@@ -24,13 +24,13 @@ class harmony_Test: XCTestCase {
     }
     
     func testSwiftYellow() {
-        let color = UIColor(hex: 0xFFAC45)
-        XCTAssertTrue( color.complement.isEqual(to: UIColor(hex: 0x4599FF), strict: false) )
+        let color = UIColor(hex: "#FFAC45")
+        XCTAssertTrue( color.complement.isEqual(to: UIColor(hex: "#4599FF"), strict: false) )
     }
     
     func testMyBeautifulDarkTwistedPink() {
-        let color = UIColor(hex: 0xC6143B)
-        XCTAssertTrue( color.complement.isEqual(to: UIColor(hex: 0x14C69F), strict: false) )
+        let color = UIColor(hex: "#C6143B")
+        XCTAssertTrue( color.complement.isEqual(to: UIColor(hex: "#14C69F"), strict: false) )
     }
     
 }

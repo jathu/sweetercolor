@@ -10,7 +10,7 @@ A color extension library for Swift.*
 
 ``` Swift
 // Example of hex initializer
-let sun = UIColor(hex: 0xFBF002)
+let sun = UIColor(hex: "#FBF002")
 // Example of RGB 0-255 initializer
 let pink = UIColor(r: 243, g: 137, b: 185)
 

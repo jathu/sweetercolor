@@ -20,11 +20,11 @@ class isDarkColor_Test: XCTestCase {
     }
     
     func testIsRedDark() {
-        XCTAssertTrue(UIColor.red().isDark, "Red is a dark color.")
+        XCTAssertTrue(UIColor.red.isDark, "Red is a dark color.")
     }
     
     func testIsYellowDark() {
-        XCTAssertFalse(UIColor.yellow().isDark, "Yellow is not a dark color.")
+        XCTAssertFalse(UIColor.yellow.isDark, "Yellow is not a dark color.")
     }
     
     func testIsDarkGrayDark() {
