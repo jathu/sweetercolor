@@ -379,11 +379,11 @@ extension UIColor {
         // CIEDE2000, Sharma 2004 -> http://www.ece.rochester.edu/~gsharma/ciede2000/ciede2000noteCRNA.pdf
         
         func rad2deg(r: CGFloat) -> CGFloat {
-            return r * CGFloat(180/M_PI)
+            return r * CGFloat(180/Double.pi)
         }
         
         func deg2rad(d: CGFloat) -> CGFloat {
-            return d * CGFloat(M_PI/180)
+            return d * CGFloat(Double.pi/180)
         }
         
         let k_l = CGFloat(1), k_c = CGFloat(1), k_h = CGFloat(1)
@@ -406,8 +406,8 @@ extension UIColor {
         let C_2_p = sqrt(pow(a_2_p, 2) + pow(b_2, 2))
         
         // Read note 1 (page 23) for clarification on radians to hue degrees
-        let h_1_p = (b_1 == 0 && a_1_p == 0) ? 0 : (atan2(b_1, a_1_p) + CGFloat(2 * M_PI)) * CGFloat(180/M_PI)
-        let h_2_p = (b_2 == 0 && a_2_p == 0) ? 0 : (atan2(b_2, a_2_p) + CGFloat(2 * M_PI)) * CGFloat(180/M_PI)
+        let h_1_p = (b_1 == 0 && a_1_p == 0) ? 0 : (atan2(b_1, a_1_p) + CGFloat(2 * Double.pi)) * CGFloat(180/Double.pi)
+        let h_2_p = (b_2 == 0 && a_2_p == 0) ? 0 : (atan2(b_2, a_2_p) + CGFloat(2 * Double.pi)) * CGFloat(180/Double.pi)
         
         let deltaL_p = L_2 - L_1
         let deltaC_p = C_2_p - C_1_p
