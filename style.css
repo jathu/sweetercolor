@@ -97,7 +97,7 @@ h1#main-container-title {
   width: 400px;
   height: 75px;
   margin-top: 75px;
-  background-image: url(https://raw.githubusercontent.com/jathu/sweetercolor/master/Images/preview.png);
+  background-image: url(images/preview.png);
   background-position: center center;
   background-repeat: no-repeat;
 }
