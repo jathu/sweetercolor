@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
 
   spec.ios.deployment_target = "9.0"
   spec.tvos.deployment_target = "9.0"
-  spec.source_files = "Sources/*.swift"
+  spec.source_files = "Sweetercolor/*.swift"
   spec.requires_arc = true
   spec.pod_target_xcconfig = {
     "SWIFT_VERSION" => "3.0"
