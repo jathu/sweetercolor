@@ -27,6 +27,10 @@ label.layer.shadowColor = pink.overlayBlack.with(alpha: 0.6).cgColor
 ```
 ![Example Preview](Images/preview.png)
 
+## Installation
+
+You can either directly copy [Sweetercolor.swift](Sweetercolor/Sweetercolor.swift) into your project *or* you can use CocoaPods: [Sweetercolor](https://cocoapods.org/pods/Sweetercolor).
+
 ## Documentation
 
 Each method is documented using headerdocs. An overview can be found here: [**jathu.me/sweetercolor**](http://jathu.me/sweetercolor/)
