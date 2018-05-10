@@ -14,7 +14,7 @@ let sun = UIColor(hex: "#FBF002")
 // Example of RGB 0-255 initializer
 let pink = UIColor(r: 241, g: 139, b: 185)
 
-let container = UIView(frame: CGRectMake(0, 0, 888, 250))
+let container = UIView(frame: CGRect(x: 0, y: 0, width: 888, height: 250))
 container.backgroundColor = pink
 
 let label = UILabel(frame: container.frame)
@@ -23,7 +23,7 @@ label.textColor = sun
 
 // Example of overlay similar to Photoshop with reduced alpha
 // This allows us to get a more natural ambient shadow
-label.layer.shadowColor = pink.overlayBlack.withAlpha(0.6).CGColor
+label.layer.shadowColor = pink.overlayBlack.with(alpha: 0.6).cgColor
 ```
 ![Example Preview](Images/preview.png)
 

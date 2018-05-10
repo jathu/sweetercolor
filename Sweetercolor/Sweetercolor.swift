@@ -19,14 +19,14 @@ extension UIColor {
     convenience init(hex: String, alpha: CGFloat = 1) {
         var hex = hex.replacingOccurrences(of: "#", with: "")
         
-        guard hex.characters.count == 3 || hex.characters.count == 6 else {
-            fatalError("Hex characters must be either 3 or 6 characters")
+        guard hex.count == 3 || hex.count == 6 else {
+            fatalError("fatalError(Sweetercolor): Hex characters must be either 3 or 6 characters.")
         }
         
-        if hex.characters.count == 3 {
-            var tmp = hex
+        if hex.count == 3 {
+            let tmp = hex
             hex = ""
-            for c in tmp.characters {
+            for c in tmp {
                 hex += String([c,c])
             }
         }
@@ -532,8 +532,8 @@ extension UIColor {
      
         - returns: A UIColor clone with the new alpha.
     */
-    func withAlpha(newAlpha: CGFloat) -> UIColor {
-        return self.withAlphaComponent(newAlpha)
+    func with(alpha: CGFloat) -> UIColor {
+        return self.withAlphaComponent(alpha)
     }
     
     
